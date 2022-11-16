@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    text-decoration: none;
+    border: none;
+    transition: .2s ease all;
+}
+
+body {
+    background: url("/Lista\ 1/praia.jpg"), rgba(255, 255, 255, 0.19);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    height: 100vh;
+}
+
+.nav {
+    background: rgba(63, 65, 64, 0.48);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.8px);
+    -webkit-backdrop-filter: blur(9.8px);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav .brand {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+}
+
+a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    border-bottom: #fff 1px solid;
+}
+
+#mark{
+    color: #157881;
+}
+
+.main {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.title {
+    color: #157881;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 380px;
+    height: 70vh;
+    border-radius: 10px;
+    padding: 0rem 2rem 2rem 2rem;
+    overflow-y: auto;
+    text-align: center;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #84AAB1;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #157881;
+    
+}
+
+.box-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    background: rgba(21, 120, 129, 0.39);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 5px;
+    width: 300px;
+    min-height: 2rem;
+}
+
+.box-title {
+    color: #157881;
+    font-size: 20px;
+    padding: 20px;
+
+}
+
+.btn {
+    font-weight: 500;
+    padding: 10px;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn:active {
+    background: #757575;
+    transform: scale(1);
+}
+
+#close-lista1 {
+    color: #187980;
+    font-size: 2rem;
+    right: 1rem;
+    top: 1rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+#close-lista1:hover {
+    color: #757575;
+    transform: rotate(90deg);
+}
+
+#close-lista2 {
+    color: #187980;
+    font-size: 2rem;
+    right: 30px;
+    top: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#close-lista2:hover {
+    color: #757575;
+    transform: rotate(90deg);
+}
+
+/* #lista1 {
+    display: none;
+}
+
+#lista2 {
+    display: none;
+}
+
+#faccat {
+    display: none;
+}
+
+#manzanno {
+    display: none;
+} */

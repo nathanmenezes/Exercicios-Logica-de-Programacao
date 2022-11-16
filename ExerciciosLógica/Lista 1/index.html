@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/lista1.css">
+    <link rel="stylesheet" href="css/lista2.css">
+    <link rel="stylesheet" href="css/lista3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="../Lista FACAT/index.html">Lista Exercicios FACAT</a>
+        <p href="" class="brand"> <span id="mark"><</span>Dev<span id="mark">></span/>Nathan</p>
+        <a href="../Lista Manzanno/index.html">Lista Exercicios MANZANNO</a>
+    </nav>
+
+    <main class="main">
+        <h1 class="title">
+            EXERCÍCIOS DE LÓGICA DE PROGRAMAÇÃO
+        </h1>
+        <div class="container">
+            <div class="box" id="lista1">
+                <h2 class="box-title">
+                    LISTA 1
+                </h2>
+                <div class="box-item">
+                    <button type="button" class="btn" onclick="open4operacoes()">
+                        Exercicio - 4 Operações
+                    </button>
+                    <button type="button" class="btn" onclick="openareacirculo()">
+                        Exercicio - Área do Circulo
+                    </button>
+                    <button type="button" class="btn" onclick="openarearetangulo()">
+                        Exercicio - Área do Retangulo
+                    </button>
+                    <button type="button" class="btn" onclick="openareatrapezio()">
+                        Exercicio - Área do Trapezio
+                    </button>
+                    <button type="button" class="btn" onclick="openarealosango()">
+                        Exercicio - Área do Losango
+                    </button>
+                    <button type="button" class="btn" onclick="openareaquadrado()">
+                        Exercicio - Área do Quadrado
+                    </button>
+                    <button type="button" class="btn" onclick="openareatriangulo()">
+                        Exercicio - Área do Triangulo
+                    </button>
+                    <button type="button" class="btn" onclick="opennumeroantecessor()">
+                        Exercicio - Número Antecessor
+                    </button>
+                    <button type="button" class="btn" onclick="opennumerosucessor()">
+                        Exercicio - Número Sucessor
+                    </button>
+                </div>
+            </div>
+            <div class="screen-lista1 animate__animated animate__fadeInLeft">
+                <i class="fa fa-close" onclick="closelista1()" id="close-lista1"></i>
+                <div class="operacoes4">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">4 Operações</h2>
+                        <p class="screen-lista1-text">Ler dois números e apresentar a soma, subtração, divisão e
+                            multiplicação</p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-4operacoes" placeholder="Primeiro Número">
+                            <input type="text" id="n2-4operacoes" placeholder="Segundo Número">
+                            <button id="submit4operacoes">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultSoma">
+                            Soma:
+                        </p>
+                        <p class="resultSubtracao">
+                            Subtração:
+                        </p>
+                        <p class="resultMultiplicacao">
+                            Multiplicação:
+                        </p>
+                        <p class="resultDivisao">
+                            Divisão:
+                        </p>
+                    </div>
+                </div>
+                <div class="numerosucessor">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Número Sucessor</h2>
+                        <p class="screen-lista1-text">
+                            Escreva um algoritmo para ler um valor do teclado e exibir como resposta o número sucessor.
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-sucessor" placeholder="Digite um Valor">
+                            <button id="submit-numerosucessor">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p id="numero-sucessor">
+                            Número Sucessor: 
+                        </p>
+                    </div>
+                </div>
+                <div class="numeroantecessor">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Número antecessor</h2>
+                        <p class="screen-lista1-text">
+                            Escreva um algoritmo para ler um valor do teclado e exibir como resposta o número antecessor.
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-antecessor" placeholder="Digite um Valor">
+                            <button id="submit-numeroantecessor">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p id="numero-antecessor">
+                            Número Antecessor: 
+                        </p>
+                    </div>
+                </div>
+                <div class="areatriangulo">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Área do Triangulo</h2>
+                        <p class="screen-lista1-text">Escreva um algoritmo para ler as dimensões de um triângulo (base e altura), calcular e escrever a área do triângulo. Dica a=b.h/2</p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-areatriangulo" placeholder="Base: ">
+                            <input type="text" id="n2-areatriangulo" placeholder="Altura: ">
+                            <button id="submitareatriangulo">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultAreaTriangulo">
+                            Área:
+                        </p>
+                    </div>
+                </div>
+                <div class="arearetangulo">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Área do Retangulo</h2>
+                        <p class="screen-lista1-text">Escreva um algoritmo para ler as dimensões de um retângulo (base e altura), calcular e escrever a área do retângulo. Dica a=b.h</p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-arearetangulo" placeholder="Base: ">
+                            <input type="text" id="n2-arearetangulo" placeholder="Altura: ">
+                            <button id="submitarearetangulo">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultarearetangulo">
+                            Área:
+                        </p>
+                    </div>
+                </div>
+                <div class="areaquadrado">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Área do Quadrado</h2>
+                        <p class="screen-lista1-text">Escreva um algoritmo para ler as dimensões de um quadrado (lado), calcular e escrever a área do quadrado. Dica a=l²</p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-areaquadrado" placeholder="Lado: ">
+                            <button id="submitareaquadrado">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultareaquadrado">
+                            Área:
+                        </p>
+                    </div>
+                </div>
+                <div class="arealosango">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Área do Losango</h2>
+                        <p class="screen-lista1-text"> Escreva um algoritmo para ler as dimensões de um losango (diagonal maior, diagonal menor), calcular e escrever a área do losango. Dica a=D.d/2</p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-arealosango" placeholder="Diagonal Maior: ">
+                            <input type="text" id="n2-arealosango" placeholder="Diagonal Menor: ">
+                            <button id="submitarealosango">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultarealosango">
+                            Área:
+                        </p>
+                    </div>
+                </div>
+                <div class="areatrapezio">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Área do Trapezio</h2>
+                        <p class="screen-lista1-text"> Escreva um algoritmo para ler as dimensões de um trapézio (base maior, base menor e altura), calcular e escrever a área do trapézio. a=(B+b).h/2 </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-areatrapezio" placeholder="Base Maior: ">
+                            <input type="text" id="n2-areatrapezio" placeholder="Base Menor: ">
+                            <input type="text" id="n3-areatrapezio" placeholder="Altura: ">
+                            <button id="submitareatrapezio">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultareatrapezio">
+                            Área:
+                        </p>
+                    </div>
+                </div>
+                <div class="areacirculo">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Área do Circulo</h2>
+                        <p class="screen-lista1-text"> Escreva um algoritmo para ler as dimensões de um círculo (raio), calcular e escrever a área do círculo. a=pi*r²</p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="n1-areacirculo" placeholder="Raio do Circulo: ">
+                            <button id="submitareacirculo">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultareacirculo">
+                            Área:
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="lista2">
+                <h2 class="box-title">
+                    LISTA 2
+                </h2>
+                <div class="box-item">
+                    <button type="button" class="btn" onclick="opencalculocombustivel()">
+                        Exercicio - Calculo Combustivel
+                    </button>
+                    <button type="button" class="btn" onclick="openconvertercemf()">
+                        Exercicio - Coverter °C para °F
+                    </button>
+                    <button type="button" class="btn" onclick="openconverterfemc()">
+                        Exercicio - Coverter °F para °C
+                    </button>
+                    <button type="button" class="btn" onclick="opencustocarro()">
+                        Exercicio - Custo Carro
+                    </button>
+                    <button type="button" class="btn" onclick="openidadeemdias()">
+                        Exercicio - Idade Em Dias
+                    </button>
+                    <button type="button" class="btn" onclick="openinvertervalores()">
+                        Exercicio - Inverter Valores
+                    </button>
+                    <button type="button" class="btn" onclick="openporcentagemvalores()">
+                        Exercicio - Porcentagem de Votos
+                    </button>
+                    <button type="button" class="btn" onclick="openreajustesalario()">
+                        Exercicio - Reajuste Salário
+                    </button>
+                    <button type="button" class="btn" onclick="openvolumelataoleo()">
+                        Exercicio - Volume Lata de Óleo
+                    </button>
+                    <button type="button" class="btn" onclick="openprestaçãoematraso()">
+                        Exercicio - Prestação Em Atraso
+                    </button>
+                </div>
+            </div>
+            <div class="screen-lista2 animate__animated animate__fadeInLeft">
+                <i class="fa fa-close" onclick="closelista2()" id="close-lista2"></i>
+                <div class="calculocombustivel">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Calculo Combustivel</h2>
+                        <p class="screen-lista1-text">Efetuar o cálculo da quantidade de litros de combustível gasta em uma viagem, utilizando um automóvel que faz 12 Km por litro. Para obter o cálculo, o usuário deve fornecer o tempo gasto
+                            (TEMPO) e a velocidade média (VELOCIDADE) durante a viagem. 
+                            </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="tempo-calculocombustivel" placeholder="Tempo:">
+                            <input type="text" id="velocidade-calculocombustivel" placeholder="Velocidade:">
+                            <button id="submitcalculocombustivel">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultcalculocombustivel-velocidade">
+                            Velocidade Média:
+                        </p>
+                        <p class="resultcalculocombustivel-tempo">
+                            Tempo Gasto:
+                        </p>
+                        <p class="resultcalculocombustivel-distancia">
+                            Distancia Percorrida:
+                        </p>
+                        <p class="resultcalculocombustivel-litros">
+                            Litros Usados:
+                        </p>
+                    </div>
+                </div>
+                <div class="convertercemf">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Converter °C em °F</h2>
+                        <p class="screen-lista1-text">Ler uma temperatura em graus Celsius e apresentá-la convertida em graus Fahrenheit. 
+                            </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="temperaturac" placeholder="Temperatura em °C:">
+                            <button id="submitconvertercemf">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultconvertercemf">
+                            Temperatura em °C: <br>
+                            Temperatura em °F: 
+                        </p>
+                    </div>
+                </div>
+                <div class="converterfemc">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Converter °F em °C</h2>
+                        <p class="screen-lista1-text">
+                            Ler uma temperatura em graus Fahrenheit e apresentá-la convertida em graus Celsius.
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="temperaturaf" placeholder="Temperatura em °F:">
+                            <button id="submitconverterfemc">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultconverterfemc">
+                            Temperatura em °F: <br>
+                            Temperatura em °C: 
+                        </p>
+                    </div>
+                </div>
+                <div class="custocarro">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Custo Carro</h2>
+                        <p class="screen-lista1-text">
+                            O custo de um carro novo ao consumidor é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%, escrever um algoritmo para ler o custo de fábrica de um carro, calcular e escrever o custo final ao consumidor.
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="valorcarro" placeholder="Custo Fabrica: ">
+                            <button id="submitcustocarro">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultcustocarro">
+                            Custo Final ao Consumidor:
+                        </p>
+                    </div>
+                </div>
+                <div class="idadeemdias">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Idade em Dias</h2>
+                        <p class="screen-lista1-text">
+                            Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e dias e escreva a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias. 
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="idadeano" placeholder="Anos: ">
+                            <input type="text" id="idademes" placeholder="Meses: ">
+                            <input type="text" id="idadedia" placeholder="Dias: ">
+                            <button id="submitidadeemdias" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultidadeemdias">
+                            A sua idade em dias é igual a:
+                        </p>
+                    </div>
+                </div>
+                <div class="invertervalores">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Inverter Valores</h2>
+                        <p class="screen-lista1-text">
+                            Ler dois valores (inteiros, reais ou caracteres) para as variáveis A e B, e efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e a variável B passe a possuir o valor da variável A. Apresentar os valores trocados.
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="A-invertervalores" placeholder="A: ">
+                            <input type="text" id="B-invertervalores" placeholder="B: ">
+                            <button id="submitinvertervalores" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultinvertervalores">
+                            A: <br>
+                            B:
+                        </p>
+                    </div>
+                </div>
+                <div class="porcentagemvotos">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Porcentagem de Votos</h2>
+                        <p class="screen-lista1-text">
+                            Escreva um algoritmo para ler o número total de eleitores de um município, o número de votos brancos, nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total de eleitores. 
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="eleitores" placeholder="Digite o número de eleitores: ">
+                            <input type="text" id="votosvalidos" placeholder="Votos Validos: ">
+                            <input type="text" id="votosbranco" placeholder="Votos Branco: ">
+                            <input type="text" id="votosnulo" placeholder="Votos Nulos: ">
+                            <button id="submitporcentagemvotos" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultporcentagemvotos">
+                        </p>
+                    </div>
+                </div>
+                <div class="reajustesalario">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Reajuste Salario</h2>
+                        <p class="screen-lista1-text">
+                            Escreva um algoritmo para ler o salário mensal atual de um funcionário e o percentual de reajuste. Calcular e escrever o valor do novo salário. 
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="salariomensal" placeholder="Salário Mensal: ">
+                            <input type="text" id="percentualajuste" placeholder="Percentual de Ajuste: ">
+                            <button id="submitreajustesalario" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultreajustesalario">
+                            Novo Salário:
+                        </p>
+                    </div>
+                </div>
+                <div class="volumelataoleo">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Volume Lata de Óleo</h2>
+                        <p class="screen-lista1-text">
+                            Calcular e apresentar o valor do volume de uma lata de óleo, utilizando a fórmula: <br>Volume = π*Raio2*Altura
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="raio" placeholder="Raio">
+                            <input type="text" id="altura" placeholder="Altura: ">
+                            <button id="submitvolumelataoleo" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultvolumelataoleo">
+                            Volume:
+                        </p>
+                    </div>
+                </div>
+                <div class="prestaçãoematraso">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Prestação Em Atrasada</h2>
+                        <p class="screen-lista1-text">
+                            Efetuar o cálculo e a apresentação do valor de uma prestação em atraso, utilizando a fórmula PRESTACAO=VALOR+(VALOR*TAXA/100) *TEMPO).
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="valor" placeholder="Valor:" >
+                            <input type="text" id="tempo" placeholder="Tempo: ">
+                            <input type="text" id="taxa" placeholder="Taxa: ">
+                            <button id="submitprestaçãoematraso" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultprestaçãoematraso">
+                            Prestação:
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="lista3">
+                <h2 class="box-title">
+                    LISTA 3
+                </h2>
+                <div class="box-item">
+                    <button type="button" class="btn" onclick="opennumerossomadosemultiplicados()">
+                        Exercicio - 4 Números Somados e Multiplicados Entre Eles
+                    </button>
+                    <button type="button" class="btn" onclick="openconversaodolar()">
+                        Exercicio - Conversão Dolar
+                    </button>
+                    <button type="button" class="btn" onclick="openconversaorealdolar()">
+                        Exercicio - Conversão Real
+                    </button>
+                    <button type="button" class="btn">
+                        Exercicio - Eleição Sindical
+                    </button>
+                    <button type="button" class="btn">
+                        Exercicio - Quadrado da Diferença
+                    </button>
+                    <button type="button" class="btn">
+                        Exercicio - Quadrado da Soma de 3 Valores
+                    </button>
+                    <button type="button" class="btn">
+                        Exercicio - Reajuste Salário
+                    </button>
+                    <button type="button" class="btn">
+                        Exercicio - Soma do Quadrado de Três Valores
+                    </button>
+                    <button type="button" class="btn">
+                        Exercicio - Soma e Produto
+                    </button>
+                    <button type="button" class="btn">
+                        Exercicio - Volume Caixa
+                    </button>
+                </div>
+            </div>
+            <div class="screen-lista3 animate__animated animate__fadeInLeft">
+                <i class="fa fa-close" onclick="closelista3()" id="close-lista2"></i>
+                <div class="numerossomadosemultiplicados ex">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">4 Números Somados e Multiplicados Entre Eles</h2>
+                        <p class="screen-lista1-text">
+                            Ler quatro números inteiros e apresentar o resultado da adição e multiplicação, baseando-se na utilização do conceito da propriedade distributiva. 
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="A-numerossomadosemultiplicados" placeholder="A: ">
+                            <input type="text" id="B-numerossomadosemultiplicados" placeholder="B: ">
+                            <input type="text" id="C-numerossomadosemultiplicados" placeholder="C: ">
+                            <input type="text" id="D-numerossomadosemultiplicados" placeholder="D: ">
+                            <button id="submitnumerossomadosemultiplicados" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultnumerossomadosemultiplicados">
+                        </p>
+                    </div>
+                </div>
+                <div class="conversaodolar ex">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Converter Real em Dolar</h2>
+                        <p class="screen-lista1-text">
+                            Elaborar um programa que efetue a apresentação do valor da conversão em real de um valor lido em dólar. O programa deve solicitar o valor da cotação do dólar e também a quantidade de dólares disponível com o usuário, para que seja apresentado o valor em moeda brasileira.
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="cotacaodolar" placeholder="Cotação Atual do Dolar: ">
+                            <input type="text" id="quantiadolar" placeholder="Quantidade de Dolares: ">
+                            <button id="submitconversaodolar" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultconversaodolar">
+                            Os seus dolares equivale a:
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="conversaorealdolar ex">
+                    <div class="screen-lista1-text">
+                        <h2 class="screen-lista1-title">Converter Real em Dolar</h2>
+                        <p class="screen-lista1-text">
+                            Elaborar um programa que efetue a apresentação do valor da conversão em dólar de um valor lido em real. O programa deve solicitar o valor da cotação do dólar e também a quantidade de reais disponível com o usuário
+                        </p>
+                    </div>
+                    <div class="screen-lista1-input">
+                        <form action="">
+                            <input type="text" id="cotacaodolarr" placeholder="Cotação Atual do Dolar: ">
+                            <input type="text" id="quantiareais" placeholder="Quantidade de Reais: ">
+                            <button id="submitconversaorealdolar" type="button">Calcular</button>
+                        </form>
+                    </div>
+                    <div class="screen-lista1-output">
+                        <p class="resultreal">
+                            Os seus reais equivale a:
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+
+
+    <script src="js/lista1.js"></script>
+    <script src="js/lista2.js"></script>
+    <script src="js/lista3.js"></script>
+</body>
+
+</html>
